@@ -1,15 +1,34 @@
 {
   "version": 2,
+  "headers": [
+    {
+      "source": "/vercel-config-cors",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "https://rrv7.vercel.app"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, PUT, DELETE, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type, Authorization"
+        }
+      ]
+    }
+  ],
   "builds": [
     {
-      "src": "index.js",
+      "src": "/src/index.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "index.js"
+      "dest": "/src/index.js"
     }
   ]
 }
