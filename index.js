@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const cors = require('cors')
+app.use(cors())
 require('./src/config/dbConfig')
   .then(res =>{
     console.log('Banco carregado.') 
